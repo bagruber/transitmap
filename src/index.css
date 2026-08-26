@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* The SVG canvas should never show a text cursor or selection highlight. */
+#map-root {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
