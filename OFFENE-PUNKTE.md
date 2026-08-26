@@ -26,6 +26,19 @@ TypeScript 7 hat die Option entfernt (Fehler TS5102). Die Zeile
 tsconfig-Datei auf, die Eintraege stimmen unveraendert weiter. **Nicht
 "reparieren", indem `baseUrl` wieder eingetragen wird.**
 
+## GitHub Pages ist nicht eingerichtet
+
+Der Deploy-Workflow laeuft, der `build`-Job ist gruen — der `deploy`-Job bricht
+mit *"Ensure GitHub Pages has been enabled"* (HTTP 404) ab. Fuer dieses Repo
+wurde Pages nie aktiviert; bis zum 26.08.2026 lag auch kein Code im Remote, der
+Workflow ist also nie gelaufen.
+
+**Zu tun**, falls die Seite oeffentlich erreichbar sein soll:
+https://github.com/bagruber/transitmap/settings/pages — Source auf
+"GitHub Actions" stellen. Das veroeffentlicht die Seite im Web, ist also eine
+Entscheidung und kein Konfigurationsdetail. Solange sie aussteht, schlaegt jeder
+Push den Deploy-Job fehl, ohne dass am Build etwas falsch waere.
+
 ## Der Code lag bis 26.08.2026 unversioniert
 
 Das Repo hatte nur einen `Initial commit` mit der README; der gesamte Editor lag
